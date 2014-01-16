@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="swiz-framework-v1.4.0" type="flex">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/as3libs/swiz/bin/swiz-framework-v1.4.0.swc!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/as3libs/swiz/docs" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/as3libs/swiz/src" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/as3libs/swiz/docs" recursive="false" type="JAVADOC" />
+  </library>
+</component>

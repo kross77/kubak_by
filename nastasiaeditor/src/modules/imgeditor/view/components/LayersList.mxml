@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+  Created by Admin on 10.01.14.
+-->
+<mx:List
+        xmlns:fx="http://ns.adobe.com/mxml/2009"
+        itemRenderer="modules.imgeditor.view.itemrenderers.LayerItemRenderer"
+        dragMoveEnabled="true"
+        dragEnabled="true"
+        dropEnabled="true"
+        xmlns:mx="library://ns.adobe.com/flex/mx">
+    <fx:Metadata>
+        [Event(name="selectImage", type="modules.imgeditor.event.renderer.LayerItemRendererEvent")]
+    </fx:Metadata>
+</mx:List>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="TransformTool" type="flex">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/as3libs/transform_tool_2_5_0/TransformTool/bin/TransformTool.swc!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/as3libs/transform_tool_2_5_0/TransformTool/src" />
+    </SOURCES>
+  </library>
+</component>

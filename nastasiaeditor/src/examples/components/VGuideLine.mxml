@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!--
+  Created by user on 14.01.14.
+-->
+<s:Line xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+        alpha="0.1" y="45" height="230">
+    <s:stroke>
+        <s:SolidColorStroke/>
+    </s:stroke>
+</s:Line>

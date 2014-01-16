@@ -1,0 +1,75 @@
+Text for description in org.as3commons.collections:StringSet is not valid.
+org.xml.sax.SAXParseException; lineNumber: 33; columnNumber: 30; Тип элемента "code" должен заканчиваться соответствующим концевым тегом "</code>".
+
+Text for description in org.as3commons.collections:StringMap is not valid.
+org.xml.sax.SAXParseException; lineNumber: 33; columnNumber: 30; Тип элемента "code" должен заканчиваться соответствующим концевым тегом "</code>".
+
+Text for description in org.as3commons.collections:SortedList is not valid.
+org.xml.sax.SAXParseException; lineNumber: 17; columnNumber: 96; Тип элемента "li" должен заканчиваться соответствующим концевым тегом "</li>".
+
+Text for description in org.as3commons.collections:Treap is not valid.
+org.xml.sax.SAXParseException; lineNumber: 29; columnNumber: 20; Тип элемента "li" должен заканчиваться соответствующим концевым тегом "</li>".
+
+Text for description in org.as3commons.collections:SortedSet is not valid.
+org.xml.sax.SAXParseException; lineNumber: 14; columnNumber: 44; Тип элемента "li" должен заканчиваться соответствующим концевым тегом "</li>".
+
+Text for description in org.as3commons.collections:Set is not valid.
+org.xml.sax.SAXParseException; lineNumber: 14; columnNumber: 20; Тип элемента "li" должен заканчиваться соответствующим концевым тегом "</li>".
+
+Text for description in org.as3commons.collections:Map is not valid.
+org.xml.sax.SAXParseException; lineNumber: 14; columnNumber: 51; Тип элемента "li" должен заканчиваться соответствующим концевым тегом "</li>".
+
+Text for description in org.as3commons.collections:ArrayList is not valid.
+org.xml.sax.SAXParseException; lineNumber: 18; columnNumber: 73; Тип элемента "li" должен заканчиваться соответствующим концевым тегом "</li>".
+
+Text for description in org.as3commons.collections:LinkedSet is not valid.
+org.xml.sax.SAXParseException; lineNumber: 14; columnNumber: 65; Тип элемента "li" должен заканчиваться соответствующим концевым тегом "</li>".
+
+Text for description in org.as3commons.collections:SortedMap is not valid.
+org.xml.sax.SAXParseException; lineNumber: 14; columnNumber: 76; Тип элемента "li" должен заканчиваться соответствующим концевым тегом "</li>".
+
+Text for description in org.as3commons.collections:LinkedMap is not valid.
+org.xml.sax.SAXParseException; lineNumber: 14; columnNumber: 76; Тип элемента "li" должен заканчиваться соответствующим концевым тегом "</li>".
+
+Text for description in org.as3commons.collections:LinkedList is not valid.
+org.xml.sax.SAXParseException; lineNumber: 15; columnNumber: 42; Тип элемента "li" должен заканчиваться соответствующим концевым тегом "</li>".
+
+Text for description in org.as3commons.collections.framework:ILinkedListIterator is not valid.
+org.xml.sax.SAXParseException; lineNumber: 12; columnNumber: 32; Тип элемента "ul" должен заканчиваться соответствующим концевым тегом "</ul>".
+
+Text for description in org.as3commons.collections.framework:IOrderedSetIterator is not valid.
+org.xml.sax.SAXParseException; lineNumber: 12; columnNumber: 32; Тип элемента "ul" должен заканчиваться соответствующим концевым тегом "</ul>".
+
+Text for description in org.as3commons.collections.framework:IOrderedListIterator is not valid.
+org.xml.sax.SAXParseException; lineNumber: 12; columnNumber: 32; Тип элемента "ul" должен заканчиваться соответствующим концевым тегом "</ul>".
+
+Text for description in org.as3commons.collections.framework:IOrderedMapIterator is not valid.
+org.xml.sax.SAXParseException; lineNumber: 12; columnNumber: 32; Тип элемента "ul" должен заканчиваться соответствующим концевым тегом "</ul>".
+
+Text for description in org.as3commons.collections.framework:IBinarySearchTree is not valid.
+org.xml.sax.SAXParseException; lineNumber: 16; columnNumber: 5; Тип элемента "test" должен заканчиваться соответствующим концевым тегом "</test>".
+
+Text for description in org.as3commons.collections.utils:Lists/clone is not valid.
+org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 6; Тип элемента "p" должен заканчиваться соответствующим концевым тегом "</p>".
+
+Text for description in org.as3commons.collections.utils:Lists/copy is not valid.
+org.xml.sax.SAXParseException; lineNumber: 20; columnNumber: 6; Тип элемента "p" должен заканчиваться соответствующим концевым тегом "</p>".
+
+Text for description in org.as3commons.collections.utils:Sets/clone is not valid.
+org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 6; Тип элемента "p" должен заканчиваться соответствующим концевым тегом "</p>".
+
+Text for description in org.as3commons.collections.utils:Sets/copy is not valid.
+org.xml.sax.SAXParseException; lineNumber: 20; columnNumber: 6; Тип элемента "p" должен заканчиваться соответствующим концевым тегом "</p>".
+
+Text for description in org.as3commons.collections.utils:Maps/clone is not valid.
+org.xml.sax.SAXParseException; lineNumber: 34; columnNumber: 6; Тип элемента "p" должен заканчиваться соответствующим концевым тегом "</p>".
+
+Text for description in org.as3commons.collections.utils:Maps/copy is not valid.
+org.xml.sax.SAXParseException; lineNumber: 33; columnNumber: 6; Тип элемента "p" должен заканчиваться соответствующим концевым тегом "</p>".
+
+Text for description in org.as3commons.collections.utils:LinkedLists/clone is not valid.
+org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 6; Тип элемента "p" должен заканчиваться соответствующим концевым тегом "</p>".
+
+Text for description in org.as3commons.collections.utils:LinkedLists/copy is not valid.
+org.xml.sax.SAXParseException; lineNumber: 20; columnNumber: 6; Тип элемента "p" должен заканчиваться соответствующим концевым тегом "</p>".
+

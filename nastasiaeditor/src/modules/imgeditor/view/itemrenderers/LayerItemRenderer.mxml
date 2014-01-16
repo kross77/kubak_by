@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+  Created by Admin on 10.01.14.
+-->
+
+<s:ItemRenderer implements="mx.controls.listClasses.IListItemRenderer" xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark">
+
+    <s:Button id="selectButton" label="{data.imageName}" click="selectButton_clickHandler(event)"/>
+    <fx:Script><![CDATA[
+        import modules.imgeditor.event.renderer.LayerItemRendererEvent;
+        import modules.imgeditor.model.vo.LayerVO;
+
+        private function button1_clickHandler(event:MouseEvent):void {
+        }
+
+        private function selectButton_clickHandler(event:MouseEvent):void {
+            owner.dispatchEvent(new LayerItemRendererEvent(LayerItemRendererEvent.SELECT_IMAGE, data));
+        }
+        ]]></fx:Script>
+</s:ItemRenderer>

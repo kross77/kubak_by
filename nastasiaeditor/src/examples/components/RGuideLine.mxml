@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+  Created by user on 14.01.14.
+-->
+<s:Line xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+        >
+
+    <fx:Script>
+					<![CDATA[
+        import com.vstyran.transform.utils.TransformUtil;
+
+        import mx.core.UIComponent;
+        import spark.components.Group;
+
+        public function update(target:UIComponent, passiveGuideGroup:Group):void
+        {
+            var m:Matrix = TransformUtil.getMatrix(target, passiveGuideGroup);
+
+            var stPoimt:Point =  m.transformPoint(new Point(target.width/2, target.height/2));
+            var endPoimt:Point =  m.transformPoint(new Point(target.width, target.height/2));
+            this.xFrom = stPoimt.x;
+            this.yFrom = stPoimt.y;
+            this.xTo = endPoimt.x;
+            this.yTo = endPoimt.y;
+        }
+        ]]>
+				</fx:Script>
+    <s:stroke>
+        <s:SolidColorStroke color="#AA0000"/>
+    </s:stroke>
+</s:Line>

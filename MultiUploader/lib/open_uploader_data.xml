@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<open_source_uploader>
+	<general
+		stage_width = "500"
+		stage_height = "500"		
+				
+		immediate_upload_start = "false"		
+		background_image_path = "image_uploader_data/bg.png"
+		upload_to_url = "upload.php"
+		uploading_success_url = "uploaded.php"
+		uploading_fail_url = "fail.php"		
+	>	
+	<general>
+	
+	<file_filter description="Фотографии и изображения (*.jpg, *.jpeg, *.gif, *.png)" extension="*.jpg; *.jpeg; *.gif; *.png" />
+	
+	<files_area
+		pos_x = "10"
+		pos_y = "10"
+		width = "500"
+		height = "400"
+	>	
+	</files_area>
+	
+	
+	<one_file_area 
+		pos_x = "5"
+		width = "480"
+		height = "70"
+		rect="1"
+		dist_between_files = "5"		
+		>
+		<frame normal_color = "0x000000" mouseover_color = "0x00aaaa" round_radius = "3" thickness="1" alpha="1"/>
+		<background normal_color = "0xFFFFFF" mouseover_color = "0xAAAAAA" alpha="1"/>		
+		
+		<progress_bar 			
+			fill_color = "0xFF0000"
+			border_color = "0x00FF00"
+
+			underline_height = "1"
+			main_height = "4"		
+			
+			width = "450"				
+			pos_x = "5"
+			
+			underlined_pos_y = "10"
+			main_pos_y = "13"			
+			>
+		</progress_bar>
+		
+		<file_text
+			pos_x = "10"
+			pos_y = "10"
+			width = "300"
+			font_size = "12"
+			font_name = "Arial"
+		>
+		</file_text>
+		
+		<delete_success_button 
+			pos_x = "450"
+			pos_y = "30"
+			normal_image_path_delete = "image_uploader_data/delete.png"
+			mouseover_image_path_delete = "image_uploader_data/mouseover_delete.png"
+			image_path_success = "image_uploader_data/success.png"
+		>
+		</delete_success_button>
+	</one_file_area>
+	
+	<add_files_button
+		pos_x = "50"
+		pos_y = "420"		
+		normal_image_path = "image_uploader_data/add_files.png"
+		mouseover_image_path = "image_uploader_data/mouseover_add_files.png"
+	>
+	</add_files_button>
+	
+	<upload_button
+		pos_x = "50"
+		pos_y = "420"		
+		normal_image_path = "image_uploader_data/upload.png"
+		mouseover_image_path = "image_uploader_data/mouseover_upload.png"
+	>
+	</upload_button>
+</open_source_uploader>

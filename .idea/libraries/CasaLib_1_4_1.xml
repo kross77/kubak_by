@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="CasaLib_1.4.1" type="flex">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/as3libs/casa-lib/bin/CasaLib_1.4.1.swc!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/as3libs/casa-lib/src" />
+    </SOURCES>
+  </library>
+</component>

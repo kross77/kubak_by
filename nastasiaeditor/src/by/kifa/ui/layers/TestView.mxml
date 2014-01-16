@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!--
+  Created by Admin on 11.01.14.
+-->
+<s:Application
+        xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark" xmlns:components="modules.imgeditor.view.components.*"
+        creationComplete="creationCompleteHandler(event)"
+        >
+
+
+    <fx:Script><![CDATA[
+        import mx.collections.ArrayCollection;
+        import mx.core.UIComponent;
+        import mx.events.CollectionEvent;
+        import mx.events.FlexEvent;
+        import mx.events.ListEvent;
+
+        [Bindable]
+        private var layersArr:ArrayCollection = new ArrayCollection();
+
+        private function creationCompleteHandler(event:FlexEvent):void {
+            layersArr.addEventListener(CollectionEvent.COLLECTION_CHANGE, layersArr_collectionChangeHandler);
+            layersList.dataProvider = layersArr;
+            createTestLayers();
+        }
+
+        private function createTestLayers():void {
+            for (var i:int = 0; i < 10; i++) {
+                var rect:UIComponent = createIterRect();
+                layersArr.addItem(rect);
+                rectGroup.addElement(rect);
+            }
+        }
+
+        private function createRandRect():UIComponent {
+            var instance:UIComponent = new UIComponent();
+            instance.graphics.beginFill(Math.random() * 1000000000, 1);
+            instance.graphics.drawRect(0, 0, 100, 100);
+            instance.x = int(Math.random() * 20);
+            instance.y = int(Math.random() * 20);
+            return instance;
+        }
+
+        private var iter:int = 0;
+
+        private function createIterRect():UIComponent {
+            var instance:UIComponent = new UIComponent();
+            instance.graphics.beginFill(Math.random() * 1000000000, .8);
+            instance.graphics.drawRect(0, 0, 100, 100);
+            instance.x = iter * 5;
+            instance.y = iter * 5;
+
+            var numTxt:TextField = new TextField();
+            numTxt.text = String(iter + 1);
+            numTxt.textColor = 0xffffff;
+            numTxt.mouseEnabled = false;
+            instance.addChild(numTxt);
+            instance.name = "Layer " + iter;
+            iter++;
+            return instance;
+        }
+
+
+        private function layersList_changeHandler(event:ListEvent):void {
+            trace("----------------------");
+        }
+
+        private function layersList_dataChangeHandler(event:FlexEvent):void {
+
+        }
+
+        private function layersList_updateCompleteHandler(event:FlexEvent):void {
+            trace("----------------------");
+            for each (var item:UIComponent in layersArr) {
+                trace(item.name);
+            }
+            trace("----------------------");
+            updateLayers();
+
+        }
+
+
+        private function updateLayers():void {
+
+        }
+
+        private function layersArr_collectionChangeHandler(event:CollectionEvent):void {
+            trace("----------------------");
+        }
+        ]]></fx:Script>
+
+    <components:LayersList
+            id="layersList"
+            dragEnabled="true"
+            dropEnabled="true"
+            dragMoveEnabled="true"
+            change="layersList_changeHandler(event)"
+            dataChange="layersList_dataChangeHandler(event)"
+            updateComplete="layersList_updateCompleteHandler(event)"
+            width="120"
+    />
+    <s:Group
+            id="rectGroup"
+            horizontalCenter="0"
+            verticalCenter="0"
+            >
+
+    </s:Group>
+</s:Application>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!--
+  Created by user on 15.01.14.
+-->
+
+
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark">
+    <fx:Script><![CDATA[
+        import com.vstyran.transform.consts.TransformationType;
+        import com.vstyran.transform.events.GuidelineEvent;
+        import com.vstyran.transform.model.Guideline;
+
+        import mx.core.UIComponent;
+
+        import spark.components.Image;
+
+        public function updateGuideLines(event:GuidelineEvent):void {
+            if (event.cross && event.cross.vGuideline)
+            {
+                vGuide.x = event.cross.vGuideline.value;
+            }
+            vGuide.visible = (event.cross && event.cross.vGuideline);
+
+            if (event.cross && event.cross.hGuideline)
+                hGuide.y = event.cross.hGuideline.value;
+            hGuide.visible = (event.cross && event.cross.hGuideline);
+
+            passiveGuideGroup.removeAllElements();
+            if (event.cross) {
+//                if (showPassiveGuides.selected) {
+                    for each (var vguide:Guideline in event.cross.getVGuidelines()) {
+                        var vGuideLine:VGuideLine = new VGuideLine();
+                        vGuideLine.x = vguide.value;
+                        passiveGuideGroup.addElement(vGuideLine);
+                    }
+                    for each (var hguide:Guideline in event.cross.getHGuidelines()) {
+                        var hGuideLine:HGuideLine = new HGuideLine();
+                        hGuideLine.y = hguide.value;
+                        passiveGuideGroup.addElement(hGuideLine);
+                    }
+//                }
+
+                if (event.transformationType == TransformationType.ROTATE) {
+                    if (event.cross.rGuideline) {
+                        var rTargetGuideLine:RGuideLine = new RGuideLine();
+                        rTargetGuideLine.update(event.target as UIComponent, passiveGuideGroup);
+                        passiveGuideGroup.addElement(rTargetGuideLine);
+                    }
+
+                    for each (var rguide:Guideline in event.cross.getRGuidelines()) {
+                        var rGuideLine:RGuideLine = new RGuideLine();
+                        rGuideLine.update(rguide.userData as Image, passiveGuideGroup);
+                        passiveGuideGroup.addElement(rGuideLine);
+                    }
+                }
+            }
+        }
+        ]]></fx:Script>
+
+    <s:Group id="passiveGuideGroup" top="0" bottom="0" left="0" right="0"/>
+    <s:Line id="vGuide" yFrom="45" yTo="275" depth="3" visible="false">
+        <s:stroke>
+            <s:SolidColorStroke color="#AA0000"/>
+        </s:stroke>
+    </s:Line>
+    <s:Line id="hGuide" xFrom="30" xTo="430" depth="3" visible="false">
+        <s:stroke>
+            <s:SolidColorStroke color="#AA0000"/>
+        </s:stroke>
+    </s:Line>
+   <!-- <s:Button x="31" y="10" label="Revert deleted" click="button1_clickHandler(event)" enabled="{deletedObjects.length > 0}"/>
+    <s:CheckBox x="274" y="13" id="showPassiveGuides" label="Show passive guidelines" selected="true"/>-->
+</s:Group>

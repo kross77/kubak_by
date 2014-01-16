@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<open_source_uploader>
+	<general
+		stage_width = "300"
+		stage_height = "50"		
+				
+		immediate_upload_start = "false"		
+		background_image_path = "image_uploader_data/bg.png"
+		upload_to_url = "upload.php"
+		uploading_success_url = "uploaded.php"
+		uploading_fail_url = "fail.php"		
+	>	
+	</general>
+	
+	<file_filter description="Rar архив(*.rar)" extension="*.rar" />
+	
+	<files_area
+		pos_x = "0"
+		pos_y = "0"
+		width = "150"
+		height = "50"
+		bg="0xF1F1F1"
+		rect="20"
+	>	
+	</files_area>
+	
+	
+	<one_file_area 
+		pos_x = "5"
+		width = "150"
+		height = "50"
+		rect = "0"
+		dist_between_files = "5"
+		alpha="1"
+		>
+		<frame normal_color = "0x000000" mouseover_color = "0xFF0000" round_radius = "4" thickness="2" alpha="1" rolltime=".3"/>
+		<background normal_color = "0xFFFFFF" mouseover_color = "0xAAAAAA" />		
+		
+		<progress_bar 			
+			fill_color = "0xFF0000"
+			border_color = "0x000000"
+			border_thickness = "1"
+			
+			underline_height = ".5"
+			main_height = "4"		
+			
+			width = "140"				
+			pos_x = "15"
+			
+			underlined_pos_y = "10"
+			main_pos_y = "13"
+			
+			rect="0"
+			alpha = "1"
+			>
+		</progress_bar>
+		
+		<file_text
+			pos_x = "10"
+			pos_y = "10"
+			width = "140"
+			font_size = "12"
+			font_name = "Arial"
+		>
+		</file_text>
+		
+		<delete_success_button 
+			pos_x = "350"
+			pos_y = "20"
+			normal_image_path_delete = "image_uploader_data/delete.png"
+			mouseover_image_path_delete = "image_uploader_data/mouseover_delete.png"
+			image_path_success = "image_uploader_data/success.png"
+		>
+		</delete_success_button>
+	</one_file_area>
+	
+	<add_files_button
+		pos_x = "200"
+		pos_y = "10"		
+		normal_image_path = "image_uploader_data/add_files.png"
+		mouseover_image_path = "image_uploader_data/mouseover_add_files.png"
+	>
+	</add_files_button>
+	
+	<upload_button
+		pos_x = "310"
+		pos_y = "10"		
+		normal_image_path = "image_uploader_data/upload.png"
+		mouseover_image_path = "image_uploader_data/mouseover_upload.png"
+	>
+	</upload_button>
+</open_source_uploader>

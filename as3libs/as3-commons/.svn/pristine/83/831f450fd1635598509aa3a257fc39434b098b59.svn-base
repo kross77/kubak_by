@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <properties>
+        <title>Welcome to as3commons-amf</title>
+        <author>Jan Van Coppenolle</author>
+    </properties>
+    <body>
+        <section name="Welcome to as3-commons-amf">
+            
+            <div id="downloadbox">
+                <h5>Get latest stable</h5>
+                <p>
+                    <a href="http://projects.yoolab.org/maven/content/repositories/releases/org/as3commons/as3commons-amf/1.0-RC1/as3commons-amf-1.0-RC1.swc">
+                        <img valign="top" src="images/folder-open.gif" border="0" alt="Download latest stable" title="download"/>
+                        Download
+                    </a>
+                    latest stable (1.0-RC1)
+                </p>
+                <br/>
+                <h5>Get lastest development snapshot</h5>
+                <p>
+                    <a href="downloads/as3commons-amf-latest-snapshot-bin.zip">
+                        <img valign="top" src="images/folder-open.gif" border="0" alt="Download latest stable" title="download"/>
+                        Download
+                    </a>
+                    latest snapshot
+                </p>
+            </div>
+
+
+            <p>
+                AS3Commons-amf is an open-source library to provider more flexibility when
+                working with AMF-serialized data. Currently an AS3 version of a AMF3 deserializer
+                has been ported, already providing some hooks previously impossible (yet at the
+                cost of deserialization speed compared to native Flash Player implementation).
+            </p>
+        </section>
+
+    </body>
+</document>
+

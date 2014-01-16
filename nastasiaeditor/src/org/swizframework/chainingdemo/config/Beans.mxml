@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<swiz:BeanProvider xmlns:controller="modules.imgeditor.controller.*"
+                   xmlns:fx="http://ns.adobe.com/mxml/2009"
+
+                   xmlns:service="modules.imgeditor.service.*"
+                   xmlns:swiz="http://swiz.swizframework.org" xmlns:model="modules.imgeditor.model.*">
+
+    <controller:SelectFileController id="selectFileController"/>
+    <controller:LayerManagerController id="layerManagerController"/>
+
+    <service:LayerManagerFactory id="factory" />
+
+    <model:LayersModel id="layersModel"/>
+	<!--<domain:LoggingHost id="loggingHost" />-->
+
+</swiz:BeanProvider>

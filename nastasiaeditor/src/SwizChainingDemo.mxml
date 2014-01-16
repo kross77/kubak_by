@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:config="org.swizframework.chainingdemo.config.*"
+               xmlns:fx="http://ns.adobe.com/mxml/2009"
+               xmlns:mx="library://ns.adobe.com/flex/mx"
+               xmlns:s="library://ns.adobe.com/flex/spark"
+               xmlns:swiz="http://swiz.swizframework.org"
+               xmlns:view="modules.imgeditor.view.*" xmlns:logging="log.*"
+               viewSourceURL="srcview/index.html"
+               creationComplete="creationCompleteHandler(event)"
+        >
+
+    <fx:Declarations>
+
+        <swiz:Swiz id="mySwiz">
+            <swiz:config>
+                <swiz:SwizConfig id="mySwizConfig"
+                                 eventPackages="modules.imgeditor.event.*, by.kross77.select.event.*"
+                                 viewPackages="modules.imgeditor.view.*"/>
+            </swiz:config>
+            <swiz:beanProviders>
+                <config:Beans/>
+            </swiz:beanProviders>
+            <swiz:loggingTargets>
+                <swiz:SwizTraceTarget id="myTraceTarget"/>
+            </swiz:loggingTargets>
+        </swiz:Swiz>
+    </fx:Declarations>
+
+    <s:layout>
+        <s:HorizontalLayout horizontalAlign="center" verticalAlign="middle"
+                            paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5"/>
+    </s:layout>
+
+    <view:TransformToolView id="transformToolView"/>
+
+    <fx:Script><![CDATA[
+        import mx.events.FlexEvent;
+
+        import spark.skins.spark.ImageSkin;
+
+        private function transformToolView_errorHandler(event:ErrorEvent):void {
+            trace(event);
+        }
+
+        private function mouseDownHandler(event:MouseEvent):void {
+            trace("asdfasdf");
+
+//                event.stopPropagation();
+            //event.();
+
+
+        }
+
+        private function creationCompleteHandler(event:FlexEvent):void {
+            systemManager.stage.addEventListener(MouseEvent.MOUSE_DOWN, mouseDownHandler, true, 0);
+            systemManager.stage.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, onUncaughtError);
+        }
+
+        private function onUncaughtError(event:UncaughtErrorEvent):void {
+
+            trace(event);
+        }
+        ]]></fx:Script>
+</s:Application>

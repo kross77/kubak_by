@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!--
+  Created by Admin on 08.01.14.
+-->
+<s:Application
+        addedToStage="initializeHandler(event)"
+        xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark" xmlns:components="modules.imgeditor.view.components.*"
+        >
+    <components:LayerManagerView
+            id="layerManagerView"
+            width="700"
+            height="400"/>
+    <!--ADD BUTTON-->
+    <s:VGroup>
+        <s:Button
+                id="addImageButton"
+                label="add"
+                click="addImageButton_clickHandler(event)"
+                left="0" top="0"
+                />
+    </s:VGroup>
+   <components:LayersList
+           id="layerList"
+           top="30"
+           change="layerList_changeHandler(event)"
+           selectImage="layerList_selectImageHandler(event)"
+           dataProvider="{layersModel.layersList}"
+   >
+
+
+           </components:LayersList>
+
+    <s:Group id="toolsContainerGroup"/>
+
+
+    <fx:Script>
+        <![CDATA[
+        import modules.imgeditor.event.ImageEditorEvent;
+        import modules.imgeditor.event.ToolsEvent;
+        import modules.imgeditor.event.renderer.LayerItemRendererEvent;
+        import modules.imgeditor.model.LayersModel;
+        import modules.imgeditor.view.components.types.BitmapLayerDisplObj;
+        import modules.imgeditor.view.components.ILayerDisplObj;
+
+        import mx.events.ListEvent;
+
+        [Dispatcher]
+        public var dispatcher:IEventDispatcher;
+
+        [Inject]
+        [Bindable]
+        public var layersModel:LayersModel;
+
+        private function addImageButton_clickHandler(event:MouseEvent):void {
+            dispatcher.dispatchEvent(new ImageEditorEvent(ImageEditorEvent.ADD_IMAGE));
+        }
+
+        private function initializeHandler(event:Event):void {
+            this.systemManager.stage.scaleMode = StageScaleMode.NO_SCALE;
+            this.systemManager.stage.align = StageAlign.TOP_LEFT;
+        }
+
+        private function layerList_changeHandler(event:ListEvent):void {
+
+        }
+
+        private function layerList_selectImageHandler(event:LayerItemRendererEvent):void {
+            var layer:ILayerDisplObj = layersModel.layers[event.data] as BitmapLayerDisplObj;
+            dispatcher.dispatchEvent(new ToolsEvent(ToolsEvent.SELECTION_TOOL, layer));
+        }
+        ]]>
+    </fx:Script>
+</s:Application>

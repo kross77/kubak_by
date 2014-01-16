@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="as3commons-collections-1.3.2" type="flex">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../as3libs/as3-commons/as3commons-collections-master/deploy/swc/as3commons-collections-1.3.2.swc!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../as3libs/as3-commons/as3commons-collections-master/src" />
+    </SOURCES>
+  </library>
+</component>
